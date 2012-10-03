@@ -1,4 +1,11 @@
-# Puppet virtualbox for Boxen
+# VirtualBox Puppet Module for Boxen
 
-FIXME: update me bro
+Requires the following boxen modules:
 
+* `boxen`
+
+## Usage
+
+```puppet
+include virtualbox
+```
