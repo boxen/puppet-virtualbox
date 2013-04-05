@@ -1,3 +1,8 @@
+# Installs VirtualBox
+#
+# Usage:
+#
+#   include virtualbox
 class virtualbox {
   package { 'VirtualBox':
     provider => 'pkgdmg',
