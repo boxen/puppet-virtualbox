@@ -6,7 +6,7 @@
 class virtualbox {
   package { 'VirtualBox':
     provider => 'pkgdmg',
-    source   => 'http://download.virtualbox.org/virtualbox/4.2.12/VirtualBox-4.2.12-84980-OSX.dmg'
+    source   => 'http://download.virtualbox.org/virtualbox/4.2.14/VirtualBox-4.2.14-86644-OSX.dmg'
   }
 }
 
