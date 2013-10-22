@@ -6,8 +6,9 @@
 class virtualbox {
 
   exec { 'Kill Virtual Box Processes':
-    command => 'pkill "VBoxXPCOMIPCD" && pkill "VBoxSVC" && pkill "VBoxHeadless"',
+    command => 'pkill "VBoxXPCOMIPCD" || true && pkill "VBoxSVC" || true && pkill "VBoxHeadless" || true',
     path    => '/usr/bin:/usr/sbin:/bin:/usr/local/bin',
+    #returns => [0,1],
     #refreshonly => true,
   }
 
