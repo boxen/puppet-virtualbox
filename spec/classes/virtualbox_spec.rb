@@ -2,6 +2,13 @@ require 'spec_helper'
 
 describe 'virtualbox' do
   it do
+    should contain_exec('Kill Virtual Box Processes').with({
+      :command => 'pkill "VBoxXPCOMIPCD" || true && pkill "VBoxSVC" || true && pkill "VBoxHeadless" || true',
+      :path    => '/usr/bin:/usr/sbin:/bin:/usr/local/bin',
+      :refreshonly => true,
+    })
+  end
+  it do
     should contain_package('VirtualBox-4.3.2-90405').with({
       :ensure   => 'installed',
       :source   => 'http://download.virtualbox.org/virtualbox/4.3.2/VirtualBox-4.3.2-90405-OSX.dmg',
