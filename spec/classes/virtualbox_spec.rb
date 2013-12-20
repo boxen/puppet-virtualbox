@@ -9,9 +9,9 @@ describe 'virtualbox' do
     })
   end
   it do
-    should contain_package('VirtualBox-4.3.2-90405').with({
+    should contain_package('VirtualBox-4.3.6-91406').with({
       :ensure   => 'installed',
-      :source   => 'http://download.virtualbox.org/virtualbox/4.3.2/VirtualBox-4.3.2-90405-OSX.dmg',
+      :source   => 'http://download.virtualbox.org/virtualbox/4.3.6/VirtualBox-4.3.6-91406-OSX.dmg',
       :provider => 'pkgdmg',
       :require  => 'Exec[Kill Virtual Box Processes]',
     })
